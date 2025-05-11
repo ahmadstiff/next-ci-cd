@@ -61,10 +61,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
       
       - name: Build application
-        run: next build
+        run: pnpm build
       
       - name: Run tests
-        run: next start
+        run: pnpm start
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
