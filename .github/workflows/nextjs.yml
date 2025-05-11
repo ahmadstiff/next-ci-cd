@@ -43,7 +43,7 @@ jobs:
           cache: 'pnpm'
       
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm insta
       
       - name: Setup Pages
         id: setup_pages
@@ -64,7 +64,7 @@ jobs:
         run: pnpm build
       
       - name: Run tests
-        run: pnpm start
+        run: pnpm start & sleep 10
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
